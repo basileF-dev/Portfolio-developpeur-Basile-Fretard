@@ -3,28 +3,30 @@
 const navbar = document.querySelector('.navbar');
 const techTags = document.querySelectorAll('.tech-logo-container');
 
-const techObserver = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
+        console.log(entry.isIntersecting);
         if(entry.isIntersecting) {
             entry.target.classList.remove('hidden');
             entry.target.classList.add('show');
 
-            entry.target.addEventListener('transitionend', () => {
-
-                techTags.forEach((el) => {
-                    if(entry.target.contains(el)) {
+            techTags.forEach((el) => {
+                if(entry.target.contains(el)) {
+                    entry.target.addEventListener('transitionend', () => {
                         el.style.transitionDelay = '0s';
-                    }
-                })
+                    })
+                }
             })
 
-            techObserver.unobserve(entry.target)
+            observer.unobserve(entry.target)
         }
     })
+}, {
+    threshold: 1,
 })
 
 const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => techObserver.observe(el));
+hiddenElements.forEach((el) => observer.observe(el));
 
 window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 0)

@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Lato:wght@300;400&family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+    <script defer src="canvas.js"></script>
+    <script defer type="module" src="script.js"></script>
     <title>Basile-Fretard</title>
 </head>
 <body>
@@ -46,21 +48,21 @@
 
         <section id="projects">
 
-            <div class="text-container">
+            <div class="text-container hidden">
                 <h2 class="project-title">Projets</h2>
             </div>
 
             <div class="projects-container">
-                <article class="project-card">
+                <article class="project-card hidden">
                     <img class="project-img" src="images/projets/images-cards/Sophie-Bluel.webp" alt="illustration du projet de Sophie Bluel">
                 </article>
-                <article class="project-card">
+                <article class="project-card hidden">
                     <img class="project-img" src="images/projets/images-cards/Nina-Carducci.webp" alt="illustration du projet de Nina Carducci">
                 </article>
-                <article class="project-card">
+                <article class="project-card hidden">
                     <img class="project-img" src="images/projets/images-cards/Kasa.webp" alt="illustration du projet Kasa">
                 </article>
-                <article class="project-card">
+                <article class="project-card hidden">
                     <img class="project-img" src="images/projets/images-cards/MVG.webp" alt="illustration du projet Mon Vieux Grimoire">
                 </article>
             </div>
@@ -70,7 +72,7 @@
                     <div class="modal-label">Mission :</div>
                     <h3 class="modal-title"></h3>
                     <div class="modal-main-img"></div>
-                    <div class="modal-label">Déscription :</div>
+                    <div class="modal-label">Description :</div>
                     <p class="modal-desc"></p>
                     <div class="modal-label">Technologies :</div>
                     <div class="tags-container"></div>
@@ -83,11 +85,11 @@
 
         <section id="competences">
 
-            <div class="text-container">
+            <div class="text-container hidden">
                 <h2 class="competences-title">Compétences</h2>
             </div>
 
-            <div class="text-container">
+            <div class="text-container tech hidden">
                 <div class="tech-title front">Front-End</div>
             </div>
             
@@ -120,7 +122,7 @@
             
             <div class="front-line"></div>
 
-            <div class="text-container">
+            <div class="text-container tech hidden">
                 <div class="tech-title back">Back-End</div>
             </div>
 
@@ -152,7 +154,7 @@
 
     <footer id="footer">
 
-        <div class="text-container">
+        <div class="text-container hidden">
             <h2 class="contact-title">Contactez moi :</h2>
         </div>
 
@@ -165,6 +167,4 @@
     </footer>
 
 </body>
-<script src="canvas.js"></script>
-<script type="module" src="text-typing.js"></script>
 </html>
