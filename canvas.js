@@ -1,15 +1,14 @@
 const canvas = document.getElementById('canvas');
 const header = document.querySelector('header');
 const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = header.clientWidth;
+canvas.height = header.clientHeight;
 const particlesArray = [];
-primaryColor = '#F9E6CF',
-secondaryColor = '#A67B5B',
+const primaryColor = '#00000050';
 
 window.addEventListener('resize', function (){
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = header.clientWidth;
+    canvas.height = header.clientHeight;
 });
 
 const mouse = {
@@ -41,8 +40,8 @@ class Particle {
         }
     }
     draw(){
-        ctx.fillStyle = secondaryColor;
-        ctx.strokeStyle = secondaryColor;
+        ctx.fillStyle = primaryColor;
+        ctx.strokeStyle = primaryColor;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
@@ -50,7 +49,7 @@ class Particle {
 }
 
 function init(){
-    for(let i = 0; i < Math.floor(window.innerWidth / 20); i++){
+    for(let i = 0; i < Math.floor(window.innerWidth / 7); i++){
         particlesArray.push(new Particle());
     }
 }
@@ -63,9 +62,9 @@ function handleParticles() {
         const mdx = particlesArray[i].x - mouse.x;
         const mdy = particlesArray[i].y - mouse.y;
         const mDistance = Math.sqrt(mdx * mdx + mdy * mdy);
-        if(mDistance < 250){
+        if(mDistance < 150){
             ctx.beginPath();
-            ctx.strokeStyle = secondaryColor;
+            ctx.strokeStyle = primaryColor;
             ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
             ctx.lineTo(mouse.x, mouse.y);
             ctx.stroke()
@@ -74,9 +73,10 @@ function handleParticles() {
             const dx = particlesArray[i].x - particlesArray[j].x;
             const dy = particlesArray[i].y - particlesArray[j].y;
             const distance = Math.sqrt(dx * dx + dy * dy)
-            if(distance < 200){
+            if(distance < 100){
                 ctx.beginPath();
-                ctx.strokeStyle = secondaryColor;
+                ctx.strokeStyle = primaryColor;
+                ctx.lineWidth = 100 / (distance < 30 ? 30 : distance);
                 ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
                 ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
                 ctx.stroke()
