@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Lato:wght@300;400&family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+    <title>Basile-Fretard</title>
+</head>
+<body>
+
+    <header id="header">
+
+        <canvas id="canvas"></canvas>
+
+        <nav class="navbar">
+            <a  class="logo-container" href="#">
+                <img src="images/icons/Logo-FB-final.webp" alt="logo Basile Fretard" id="logo">
+            </a>
+            <ul class="nav-links">
+                <li class="link-container"><a class="link" href="#projects">Projets</a></li>
+                <li class="link-container"><a class="link" href="#competences">Compétences</a></li>
+                <li class="link-container"><a class="link" href="#footer">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="intro-box">
+            <div class="title-container">
+                <h1 id="title"></h1>
+            </div>
+            <div class="text-container">
+                <p class="presentation">Développeur fullstack passionné formé chez OpenClassrooms, j'aime apprendre chaques jours et transformer des idées en solutions concrètes et efficaces.</p>
+            </div>
+            <a class="github-link-container" href="https://github.com/pkpak">
+                <p class="github-link">https://github.com/pkpak</p>
+                <img class="github-icon" src="images/icons/github-icon.svg" alt="">
+                <img class="github-icon-second" src="images/icons/github-icon-second.svg" alt="">
+            </a>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section id="projects">
+
+            <div class="text-container">
+                <h2 class="project-title">Projets</h2>
+            </div>
+
+            <div class="projects-container">
+                <article class="project-card">
+                    <img class="project-img" src="images/projets/images-cards/Sophie-Bluel.webp" alt="illustration du projet de Sophie Bluel">
+                </article>
+                <article class="project-card">
+                    <img class="project-img" src="images/projets/images-cards/Nina-Carducci.webp" alt="illustration du projet de Nina Carducci">
+                </article>
+                <article class="project-card">
+                    <img class="project-img" src="images/projets/images-cards/Kasa.webp" alt="illustration du projet Kasa">
+                </article>
+                <article class="project-card">
+                    <img class="project-img" src="images/projets/images-cards/MVG.webp" alt="illustration du projet Mon Vieux Grimoire">
+                </article>
+            </div>
+
+            <dialog id="modal">
+                <div class="modal-inner">
+                    <div class="modal-label">Mission :</div>
+                    <h3 class="modal-title"></h3>
+                    <div class="modal-main-img"></div>
+                    <div class="modal-label">Déscription :</div>
+                    <p class="modal-desc"></p>
+                    <div class="modal-label">Technologies :</div>
+                    <div class="tags-container"></div>
+                    <div class="modal-label">Visuels / Maquettes:</div>
+                    <div class="modal-gallery"></div>
+                </div>
+            </dialog>
+
+        </section>
+
+        <section id="competences">
+
+            <div class="text-container">
+                <h2 class="competences-title">Compétences</h2>
+            </div>
+
+            <div class="text-container">
+                <div class="tech-title front">Front-End</div>
+            </div>
+            
+            <div class="tech-logos-container hidden">
+                <div class="tech-logo-container front">
+                    <img class="tech-logo" src="images/tech-logos/html-1.svg" alt="">
+                    <div class="tech-name">
+                        HTML
+                    </div>
+                </div>
+                <div class="tech-logo-container front">
+                    <img class="tech-logo" src="images/tech-logos/css-3.svg" alt="">
+                    <div class="tech-name">
+                        CSS
+                    </div>
+                </div>
+                <div class="tech-logo-container front">
+                    <img class="tech-logo" src="images/tech-logos/logo-javascript.svg" alt="">
+                    <div class="tech-name">
+                        JAVA SCRIPT
+                    </div>
+                </div>
+                <div class="tech-logo-container front">
+                    <img class="tech-logo" src="images/tech-logos/react-2.svg" alt="">
+                    <div class="tech-name">
+                        REACT
+                    </div>
+                </div>
+            </div>
+            
+            <div class="front-line"></div>
+
+            <div class="text-container">
+                <div class="tech-title back">Back-End</div>
+            </div>
+
+            <div class="tech-logos-container hidden">
+                <div class="tech-logo-container back">
+                    <img class="tech-logo" src="images/tech-logos/nodejs-icon.svg" alt="">
+                    <div class="tech-name">
+                        NODE.JS
+                    </div>
+                </div>
+                <div class="tech-logo-container back">
+                    <img class="tech-logo" src="images/tech-logos/express-109.svg" alt="">
+                    <div class="tech-name">
+                        EXPRESS
+                    </div>
+                </div>
+                <div class="tech-logo-container back">
+                    <img class="tech-logo" src="images/tech-logos/mongodb-icon-1.svg" alt="">
+                    <div class="tech-name">
+                        MONGO DB
+                    </div>
+                </div>
+            </div>
+
+            <div class="back-line"></div>
+
+        </section>
+    </main>
+
+    <footer id="footer">
+
+        <div class="text-container">
+            <h2 class="contact-title">Contactez moi :</h2>
+        </div>
+
+        <div class="email-container">
+            <h3 id="email">fretardbasile@gmail.com</h3>
+            <img class="copy-icon" src="images/icons/copy.svg" alt="icone press papier / copier mon e-mail">
+            <img class="copy-icon second" src="images/icons/copy-second.svg" alt="icone press papier / copier mon e-mail">
+        </div>
+
+    </footer>
+
+</body>
+<script src="canvas.js"></script>
+<script type="module" src="text-typing.js"></script>
+</html>
