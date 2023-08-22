@@ -25,7 +25,7 @@ class Particle {
     constructor(){
         this.x = Math.random() * window.innerWidth;
         this.y = Math.random() * window.innerHeight;
-        this.size = Math.random() * 3 + 1;
+        this.size = Math.random() + 1;
         this.speedX = Math.random() / 2 - 0.25;
         this.speedY = Math.random() / 2 - 0.25;
     }
@@ -76,7 +76,6 @@ function handleParticles() {
             if(distance < 100){
                 ctx.beginPath();
                 ctx.strokeStyle = primaryColor;
-                ctx.lineWidth = 100 / (distance < 30 ? 30 : distance);
                 ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
                 ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
                 ctx.stroke()

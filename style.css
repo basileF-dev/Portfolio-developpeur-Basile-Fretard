@@ -12,6 +12,10 @@ html, body {
     overflow-x: hidden;
 }
 
+body {
+    background: var(--primary-color);
+}
+
 :root {
     --primary-color: #F9E6CF;
     --secondary-color: #B9AFA5;
@@ -101,7 +105,7 @@ html, body {
     text-transform: uppercase;
     margin-right: 6vw;
     padding: 5px 10px;
-    transition: color 0.4s linear;
+    transition: color 0.3s linear;
 }
 .link::before, .github-link-container::before, .email-container::before {
     content: '';
@@ -166,7 +170,7 @@ html, body {
 }
 
 .github-link {
-    font-size: clamp(12px, 2vw, 20px);
+    font-size: clamp(18px, 2vw, 25px);
     color: black;
     transition: 0.3s ease;
 }
